@@ -6,30 +6,25 @@ import './Tour.css'
 
 function Tour(props) {
 
-  const nav = useNavigate();
+  const nav = useNavigate(); //https://reactrouter.com/en/main/hooks/use-navigate 
   return (
-    <div className="Name2">
-      {props.data.map((e) => {
+    
+      
 
-        return (
+        
           
-          <div key={e.id}>
+          <div>
 
-            <Button  variant="primary" onClick={()=>nav(`/city/${e.id}`)}>{e.name}<img src={e.image} alt={e.name}></img></Button>
+            <Button  variant="primary" onClick={()=>nav(`/city/${props.data.id}`)}>{props.data.name}<img src={props.data.image} alt={props.data.name}></img></Button>
           </div>
            
           
         
-          // <div
-          //   key={e.id}
-          //   className="tours container">
-          //   <img src={e.image} alt={e.name} />
-          //   <p>{e.name}</p>
-          // </div>
-        )
+  
+        
 
-      })}
-    </div>
+      
+    
 
   );
 };

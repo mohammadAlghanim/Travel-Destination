@@ -6,9 +6,13 @@ import './Tours.css';
 const data = require('../../data/db.json')
 function Tours() {
     return (
-        <div  >
-        
-           <Tour data={data} />
+        <div  className="Name2" >
+        {data.map((e )=>
+       { return(
+
+            <Tour key={e.id} data={e} />
+        )}
+        )}
           
         
 
