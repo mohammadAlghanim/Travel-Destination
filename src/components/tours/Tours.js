@@ -1,19 +1,18 @@
 import React from "react";
-import './Tours.css'
+import Tour from "./tour/Tour";
+import './Tours.css';
 
-const data =require('../../data/db.json')
-function Tours(){
-    return(
-<div  className="Name2">
-    {data.map((e)=>{
-        return(
-            <div key={e.id}>
-        <img src={e.image} alt={e.name}/>
-        <p>{e.name}</p>
-        </div>)
-    })}
 
-</div>
+const data = require('../../data/db.json')
+function Tours() {
+    return (
+        <div  >
+        
+           <Tour data={data} />
+          
+        
+
+        </div>
     )
 }
 
